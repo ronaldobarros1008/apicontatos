@@ -9,7 +9,7 @@ use App\Models\Contato;
 
 class ContatoController extends Controller
 {
-    public function status(){
+    public function status() {
         return ['status' => 'Ok'];
     }
 
@@ -30,4 +30,18 @@ class ContatoController extends Controller
             return ['retorno' => 'erro', 'details'=>$erro];
         }
     }
+
+    public function list() {
+        $contato = Contato::all();
+
+        return $contato;
+    }
+
+    public function select($id) {
+        $contato = Contato::find($id);
+
+        return $contato;
+    }
 }
+
+

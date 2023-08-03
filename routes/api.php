@@ -31,4 +31,6 @@ Route::get('/status', [ContatoController::class, 'status']);
 
 Route::namespace('Api')->group( function() {
     Route::post('/contatos/add', [ContatoController::class, 'add']);
+    Route::get('/contatos', [ContatoController::class, 'list']);
+    Route::get('/contatos/{id}', [ContatoController::class, 'select']);
 });
