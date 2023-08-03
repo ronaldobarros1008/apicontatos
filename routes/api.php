@@ -20,4 +20,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // ======================================================================================
 
-Route::get('/teste', 'Api\ContatoController@status');
+//Route::get('/status', 'Api\ContatoController@status');
+
+use App\Http\Controllers\Api\ContatoController;
+
+Route::get('/status', [ContatoController::class, 'status']);
