@@ -33,4 +33,6 @@ Route::namespace('Api')->group( function() {
     Route::post('/contatos/add', [ContatoController::class, 'add']);
     Route::get('/contatos', [ContatoController::class, 'list']);
     Route::get('/contatos/{id}', [ContatoController::class, 'select']);
+    Route::put('/contatos/{id}', [ContatoController::class, 'update']);
+    Route::delete('/contatos/{id}', [ContatoController::class, 'delete']);
 });

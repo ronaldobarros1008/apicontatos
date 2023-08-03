@@ -42,6 +42,40 @@ class ContatoController extends Controller
 
         return $contato;
     }
+
+    public function update(Request $request, $id){
+        try{
+
+            $contato = Contato::find($id);
+
+            $contato->nome = $request->nome;
+            $contato->telefone = $request->telefone;
+            $contato->email = $request->email;
+
+            $contato->save();
+
+            return ['retorno'=>'Ok', 'data' => $request->all()];
+
+        }catch(\Exception $erro){
+            return ['retorno'=>'erro', 'details'=>$erro];
+        }
+    }
+
+    public function delete($id) {
+
+        try {
+
+            $contato = Contato::find($id);
+
+            $contato->delete();
+
+            return ['retorno'=>'Ok'];
+
+        }catch(\Exception $erro) {
+            return ['retorno'=>'erro', 'details'=>$erro];
+        }
+
+    }
 }
 
 
