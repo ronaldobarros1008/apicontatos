@@ -64,3 +64,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## API REST Laravel e MySQL
+
+Repositório do curso de API REST Laravel e MySQL, não esqueça de criar o arquivo .env para armazenar os dados do banco (baseado no arquivo de modelo que já está no repositório), também executar o "composer install" para baixar as dependências e "php artisan key:generate", para gerar a chave de criptografia.
